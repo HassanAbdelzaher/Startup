@@ -1,10 +1,15 @@
-# Golang Projects
+# Golang Projects: Very Easy to Medium (With Knowledge Requirements, Descriptions & Guides)
 
 ---
 
 ## Very Easy Projects
 
 ### 1. Hello World CLI
+**Knowledge Requirements:**  
+- Go installation and setup  
+- Basic Go syntax  
+- Using `fmt` for printing  
+
 **Description:**  
 Your first Go program! Print "Hello, World!" or a custom message to the terminal.
 
@@ -17,6 +22,11 @@ Your first Go program! Print "Hello, World!" or a custom message to the terminal
 ---
 
 ### 2. Simple Calculator
+**Knowledge Requirements:**  
+- Reading user input  
+- Basic arithmetic operations  
+- Using `switch` statements  
+
 **Description:**  
 A CLI tool that takes two numbers and an operation (+, -, *, /) and prints the result.
 
@@ -28,6 +38,11 @@ A CLI tool that takes two numbers and an operation (+, -, *, /) and prints the r
 ---
 
 ### 3. Temperature Converter
+**Knowledge Requirements:**  
+- User input and output  
+- Variables and type conversion  
+- Simple math operations  
+
 **Description:**  
 Converts temperatures between Celsius and Fahrenheit.
 
@@ -41,6 +56,11 @@ Converts temperatures between Celsius and Fahrenheit.
 ---
 
 ### 4. Guess the Number Game
+**Knowledge Requirements:**  
+- Random number generation (`math/rand`)  
+- Loops and conditionals  
+- Reading user input  
+
 **Description:**  
 A simple game where the program picks a random number and you try to guess it.
 
@@ -52,6 +72,11 @@ A simple game where the program picks a random number and you try to guess it.
 ---
 
 ### 5. Word Counter
+**Knowledge Requirements:**  
+- Reading strings  
+- String manipulation (`strings.Fields`)  
+- Slices  
+
 **Description:**  
 Counts the number of words in a sentence entered by the user.
 
@@ -65,6 +90,11 @@ Counts the number of words in a sentence entered by the user.
 ## Easy Projects
 
 ### 6. To-Do List (CLI)
+**Knowledge Requirements:**  
+- Slices and loops  
+- Structs for custom types  
+- Simple CLI menu logic  
+
 **Description:**  
 A command-line to-do list: add, list, and remove tasks.
 
@@ -76,6 +106,11 @@ A command-line to-do list: add, list, and remove tasks.
 ---
 
 ### 7. File Copier
+**Knowledge Requirements:**  
+- File operations (`os.Open`, `os.Create`)  
+- Error handling  
+- Using `io.Copy`  
+
 **Description:**  
 Copy a file from source to destination path.
 
@@ -87,6 +122,11 @@ Copy a file from source to destination path.
 ---
 
 ### 8. JSON Formatter
+**Knowledge Requirements:**  
+- JSON parsing and formatting (`encoding/json`)  
+- Reading from files or standard input  
+- Error handling  
+
 **Description:**  
 Reads raw JSON and pretty-prints it.
 
@@ -97,6 +137,11 @@ Reads raw JSON and pretty-prints it.
 ---
 
 ### 9. Timer/Stopwatch
+**Knowledge Requirements:**  
+- The `time` package  
+- Loops and goroutines (optional for more advanced timers)  
+- User input  
+
 **Description:**  
 A CLI timer or stopwatch that counts down or up.
 
@@ -108,6 +153,11 @@ A CLI timer or stopwatch that counts down or up.
 ---
 
 ### 10. Palindrome Checker
+**Knowledge Requirements:**  
+- String manipulation  
+- Functions  
+- Basic logic  
+
 **Description:**  
 Checks if a given word or sentence is a palindrome.
 
@@ -118,6 +168,11 @@ Checks if a given word or sentence is a palindrome.
 ---
 
 ### 11. Simple Contact Book
+**Knowledge Requirements:**  
+- Structs and slices  
+- CLI menu logic  
+- User input  
+
 **Description:**  
 Store, display, and delete contacts with name and phone.
 
@@ -131,6 +186,12 @@ Store, display, and delete contacts with name and phone.
 ## Medium Projects
 
 ### 12. To-Do List with File Storage
+**Knowledge Requirements:**  
+- File I/O  
+- Structs and slices  
+- JSON or CSV serialization (`encoding/json`, `encoding/csv`)  
+- Combining previous To-Do List knowledge  
+
 **Description:**  
 Enhance your CLI to-do app to save/load tasks from a file.
 
@@ -141,6 +202,12 @@ Enhance your CLI to-do app to save/load tasks from a file.
 ---
 
 ### 13. REST API for To-Do List
+**Knowledge Requirements:**  
+- HTTP server basics (`net/http`)  
+- JSON serialization/deserialization  
+- Routing and handlers  
+- Slices and structs  
+
 **Description:**  
 Create a web API with endpoints to add, list, and delete tasks.
 
@@ -152,6 +219,11 @@ Create a web API with endpoints to add, list, and delete tasks.
 ---
 
 ### 14. Weather CLI App
+**Knowledge Requirements:**  
+- HTTP requests (`net/http`)  
+- JSON parsing (`encoding/json`)  
+- Command-line input  
+
 **Description:**  
 Get current weather for a city using a public API.
 
@@ -163,6 +235,12 @@ Get current weather for a city using a public API.
 ---
 
 ### 15. URL Shortener (In-Memory)
+**Knowledge Requirements:**  
+- HTTP server (`net/http`)  
+- Maps  
+- Routing and URL parameters  
+- Random string generation  
+
 **Description:**  
 Shorten URLs and redirect using an HTTP server.
 
@@ -174,26 +252,41 @@ Shorten URLs and redirect using an HTTP server.
 ---
 
 ### 16. Markdown to HTML Converter
+**Knowledge Requirements:**  
+- File I/O  
+- Markdown processing library (e.g., `github.com/gomarkdown/markdown`)  
+- Command-line arguments  
+
 **Description:**  
 Read a markdown file and output HTML.
 
 **Guide:**  
-- Use a Go markdown library (e.g., `github.com/gomarkdown/markdown`).
+- Use a Go markdown library.
 - Read file with `os` and convert.
 
 ---
 
 ### 17. Simple Chat App (CLI, Local Network)
+**Knowledge Requirements:**  
+- TCP/UDP networking (`net` package)  
+- Goroutines for concurrency  
+- Reading/writing with connections  
+
 **Description:**  
 Send messages between clients on the same network.
 
 **Guide:**  
-- Use TCP or UDP sockets (`net` package).
+- Use TCP or UDP sockets.
 - Handle sending/receiving in goroutines.
 
 ---
 
 ### 18. Expense Tracker
+**Knowledge Requirements:**  
+- Structs and slices  
+- Basic reporting logic  
+- File I/O (for persistence, optional)  
+
 **Description:**  
 Track expenses, add categories, and show simple reports.
 
@@ -205,6 +298,11 @@ Track expenses, add categories, and show simple reports.
 ---
 
 ### 19. Basic Authentication System
+**Knowledge Requirements:**  
+- Maps and structs  
+- Password hashing (`crypto/sha256`)  
+- User input and validation  
+
 **Description:**  
 CLI or basic web app for user signup/login (in memory).
 
@@ -231,3 +329,5 @@ CLI or basic web app for user signup/login (in memory).
 - [Go by Example](https://gobyexample.com/)
 - [Effective Go](https://go.dev/doc/effective_go)
 - [Go Standard Library docs](https://pkg.go.dev/std)
+
+---
