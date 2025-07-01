@@ -1,4 +1,4 @@
-# Golang Projects: Very Easy to Medium (With Descriptions & Guides)
+# Golang Projects
 
 ---
 
