@@ -1,4 +1,4 @@
-# Golang Projects: Very Easy to Medium (With Knowledge Requirements, Descriptions & Guides)
+# Golang Projects: Very Easy to Medium (With Knowledge Requirements, Descriptions & Detailed Guides)
 
 ---
 
@@ -13,11 +13,19 @@
 **Description:**  
 Your first Go program! Print "Hello, World!" or a custom message to the terminal.
 
-**Guide:**  
-- Install Go.
-- Create a file `main.go`.
-- Use `fmt.Println("Hello, World!")`.
-- Run with `go run main.go`.
+**Detailed Guide:**  
+- [ ] Install the Go SDK from [golang.org](https://go.dev/dl/).
+- [ ] Create a directory for your project and run `go mod init helloworld`.
+- [ ] Write a `main.go` file with:
+  ```go
+  package main
+  import "fmt"
+  func main() {
+    fmt.Println("Hello, World!")
+  }
+  ```
+- [ ] Use `go run main.go` to run your program.
+- [ ] Modify the message and try printing variables or user input.
 
 ---
 
@@ -30,10 +38,11 @@ Your first Go program! Print "Hello, World!" or a custom message to the terminal
 **Description:**  
 A CLI tool that takes two numbers and an operation (+, -, *, /) and prints the result.
 
-**Guide:**  
-- Use `fmt.Scanln()` to read input.
-- Use a `switch` to choose operation.
-- Print the result.
+**Detailed Guide:**  
+- [ ] Use `fmt.Scanln()` to read two numbers and an operator from the user.
+- [ ] Implement arithmetic for each operation using a `switch`.
+- [ ] Print the result with `fmt.Printf`.
+- [ ] Handle invalid input gracefully (e.g., division by zero).
 
 ---
 
@@ -46,12 +55,11 @@ A CLI tool that takes two numbers and an operation (+, -, *, /) and prints the r
 **Description:**  
 Converts temperatures between Celsius and Fahrenheit.
 
-**Guide:**  
-- Ask user for input value and type.
-- Use formulas:
-  - C → F: `F = (C × 9/5) + 32`
-  - F → C: `C = (F - 32) × 5/9`
-- Print the converted value.
+**Detailed Guide:**  
+- [ ] Prompt the user for the temperature value and the unit (C/F).
+- [ ] Use the correct formula for conversion.
+- [ ] Print the converted value with the correct unit.
+- [ ] Add support for repeated conversions in a loop.
 
 ---
 
@@ -64,10 +72,11 @@ Converts temperatures between Celsius and Fahrenheit.
 **Description:**  
 A simple game where the program picks a random number and you try to guess it.
 
-**Guide:**  
-- Use `math/rand` for random numbers.
-- Loop until the user guesses correctly.
-- Give hints: "too high", "too low".
+**Detailed Guide:**  
+- [ ] Generate a random number using `rand.Intn`.
+- [ ] Prompt the user to guess the number.
+- [ ] Loop until the user guesses correctly, giving feedback on each guess.
+- [ ] Count the number of attempts and display it at the end.
 
 ---
 
@@ -80,10 +89,11 @@ A simple game where the program picks a random number and you try to guess it.
 **Description:**  
 Counts the number of words in a sentence entered by the user.
 
-**Guide:**  
-- Read input using `bufio.Scanner`.
-- Use `strings.Fields` to split into words.
-- Print the length of the slice.
+**Detailed Guide:**  
+- [ ] Read a full line of text using `bufio.Scanner`.
+- [ ] Split the text into words using `strings.Fields`.
+- [ ] Count and print the number of words.
+- [ ] Optionally, add functionality to count characters or sentences.
 
 ---
 
@@ -98,10 +108,12 @@ Counts the number of words in a sentence entered by the user.
 **Description:**  
 A command-line to-do list: add, list, and remove tasks.
 
-**Guide:**  
-- Use a slice to store tasks.
-- Use a loop to show menu options: add, list, remove, exit.
-- Use `fmt.Scanln` or `bufio.Scanner` for input.
+**Detailed Guide:**  
+- [ ] Define a `Task` struct with a description and completion status.
+- [ ] Use a slice to store tasks in memory.
+- [ ] Implement a CLI menu to add, list, mark as done, and remove tasks.
+- [ ] Loop the menu until the user exits.
+- [ ] Optionally, display completed and pending tasks separately.
 
 ---
 
@@ -114,10 +126,13 @@ A command-line to-do list: add, list, and remove tasks.
 **Description:**  
 Copy a file from source to destination path.
 
-**Guide:**  
-- Use `os.Open` and `os.Create`.
-- Use `io.Copy` to copy contents.
-- Handle errors.
+**Detailed Guide:**  
+- [ ] Accept source and destination file paths from the user.
+- [ ] Open the source file with `os.Open`.
+- [ ] Create the destination file with `os.Create`.
+- [ ] Use `io.Copy` to copy contents.
+- [ ] Handle errors and display appropriate messages.
+- [ ] Optionally, check for file existence and overwrite confirmation.
 
 ---
 
@@ -130,9 +145,11 @@ Copy a file from source to destination path.
 **Description:**  
 Reads raw JSON and pretty-prints it.
 
-**Guide:**  
-- Use `encoding/json` to unmarshal and marshal with indentation.
-- Read JSON from a file or standard input.
+**Detailed Guide:**  
+- [ ] Read JSON data from a file or standard input.
+- [ ] Use `json.Unmarshal` to parse the JSON into an `interface{}`.
+- [ ] Use `json.MarshalIndent` to pretty-print the JSON.
+- [ ] Print the formatted JSON, or write it to a new file.
 
 ---
 
@@ -145,10 +162,11 @@ Reads raw JSON and pretty-prints it.
 **Description:**  
 A CLI timer or stopwatch that counts down or up.
 
-**Guide:**  
-- Use `time.Sleep` and `time.Tick`.
-- Take user input for duration.
-- Print updates each second.
+**Detailed Guide:**  
+- [ ] Prompt the user for a time duration.
+- [ ] Use `time.Sleep` or a loop with `time.Tick` to count down/up.
+- [ ] Print the remaining or elapsed time every second.
+- [ ] Optionally, add pause, resume, and reset features.
 
 ---
 
@@ -161,9 +179,11 @@ A CLI timer or stopwatch that counts down or up.
 **Description:**  
 Checks if a given word or sentence is a palindrome.
 
-**Guide:**  
-- Normalize input (remove spaces, lowercase).
-- Compare string with its reverse.
+**Detailed Guide:**  
+- [ ] Read a string from the user.
+- [ ] Remove spaces and convert to lowercase.
+- [ ] Check if the string equals its reverse.
+- [ ] Print the result: palindrome or not.
 
 ---
 
@@ -176,10 +196,11 @@ Checks if a given word or sentence is a palindrome.
 **Description:**  
 Store, display, and delete contacts with name and phone.
 
-**Guide:**  
-- Use a slice of structs.
-- Add, list, and delete contacts.
-- Use menu system for user interaction.
+**Detailed Guide:**  
+- [ ] Define a `Contact` struct.
+- [ ] Use a slice to store contacts.
+- [ ] CLI menu: add, list, search, delete contacts.
+- [ ] Optional: Save/load contacts to/from a file.
 
 ---
 
@@ -195,9 +216,11 @@ Store, display, and delete contacts with name and phone.
 **Description:**  
 Enhance your CLI to-do app to save/load tasks from a file.
 
-**Guide:**  
-- Use `encoding/json` or `encoding/csv` to serialize tasks.
-- Read from file on start, write to file on changes.
+**Detailed Guide:**  
+- [ ] Serialize the tasks slice to a JSON or CSV file after every change.
+- [ ] Load tasks from the file when the program starts.
+- [ ] Update your CLI to use file-backed storage.
+- [ ] Handle file not found and corrupted file errors gracefully.
 
 ---
 
@@ -211,10 +234,12 @@ Enhance your CLI to-do app to save/load tasks from a file.
 **Description:**  
 Create a web API with endpoints to add, list, and delete tasks.
 
-**Guide:**  
-- Use `net/http` for server.
-- Use handlers for `/tasks`, `/add`, `/delete`.
-- Store tasks in memory.
+**Detailed Guide:**  
+- [ ] Set up an HTTP server with `net/http`.
+- [ ] Define handlers for `GET /tasks`, `POST /tasks`, and `DELETE /tasks/{id}`.
+- [ ] Store tasks in a slice.
+- [ ] Use `encoding/json` to handle request and response bodies.
+- [ ] Test your API with `curl` or Postman.
 
 ---
 
@@ -227,10 +252,12 @@ Create a web API with endpoints to add, list, and delete tasks.
 **Description:**  
 Get current weather for a city using a public API.
 
-**Guide:**  
-- Use `net/http` to call an API (e.g., OpenWeatherMap).
-- Parse JSON response.
-- Print weather info.
+**Detailed Guide:**  
+- [ ] Register for a free API key at [OpenWeatherMap](https://openweathermap.org/api).
+- [ ] Prompt the user for a city name.
+- [ ] Make an HTTP GET request to the weather API.
+- [ ] Parse the JSON response and display the temperature and weather description.
+- [ ] Handle API errors and invalid city names.
 
 ---
 
@@ -244,10 +271,12 @@ Get current weather for a city using a public API.
 **Description:**  
 Shorten URLs and redirect using an HTTP server.
 
-**Guide:**  
-- Use a map to store short keys and URLs.
-- Handler for creating short URLs and redirecting.
-- Use `net/http`.
+**Detailed Guide:**  
+- [ ] Set up HTTP handlers for creating and accessing short links.
+- [ ] Store mappings from short codes to URLs in a map.
+- [ ] Generate random strings for short codes.
+- [ ] On a short URL visit, redirect to the stored URL using `http.Redirect`.
+- [ ] Optionally, add a web interface for submitting URLs.
 
 ---
 
@@ -260,9 +289,11 @@ Shorten URLs and redirect using an HTTP server.
 **Description:**  
 Read a markdown file and output HTML.
 
-**Guide:**  
-- Use a Go markdown library.
-- Read file with `os` and convert.
+**Detailed Guide:**  
+- [ ] Accept a markdown file as input from the command line.
+- [ ] Use a markdown library to convert the file contents.
+- [ ] Write the result to an HTML file.
+- [ ] Optionally, support batch conversion.
 
 ---
 
@@ -275,9 +306,11 @@ Read a markdown file and output HTML.
 **Description:**  
 Send messages between clients on the same network.
 
-**Guide:**  
-- Use TCP or UDP sockets.
-- Handle sending/receiving in goroutines.
+**Detailed Guide:**  
+- [ ] Build a server that accepts multiple client connections.
+- [ ] Each client can send messages, which are broadcast to all connected clients.
+- [ ] Use goroutines to handle reading/writing for each connection.
+- [ ] Optionally, add nicknames and private messaging.
 
 ---
 
@@ -290,10 +323,11 @@ Send messages between clients on the same network.
 **Description:**  
 Track expenses, add categories, and show simple reports.
 
-**Guide:**  
-- Use a struct for expenses.
-- Store in slice or file.
-- Calculate total per category.
+**Detailed Guide:**  
+- [ ] Define an `Expense` struct with fields for amount, category, and date.
+- [ ] Allow users to add new expenses and list all expenses.
+- [ ] Calculate and display totals by category.
+- [ ] Optionally, save/load expenses from a JSON or CSV file.
 
 ---
 
@@ -306,10 +340,11 @@ Track expenses, add categories, and show simple reports.
 **Description:**  
 CLI or basic web app for user signup/login (in memory).
 
-**Guide:**  
-- Use a map for users.
-- Hash passwords with `crypto/sha256`.
-- Check credentials on login.
+**Detailed Guide:**  
+- [ ] Store usernames and hashed passwords in a map.
+- [ ] Implement signup (register), login, and logout functions.
+- [ ] Use `crypto/sha256` to hash passwords before storage.
+- [ ] Optionally, extend to a web interface using `net/http`.
 
 ---
 
